@@ -1,0 +1,24 @@
+alice->seller:title<string>.
+seller->bob:quote<integer>.
+seller->alice:quote<integer>.
+alice->bob:myquote<integer>.
+(
+    bob->carol:+quote<integer>.
+    bob<<carol.
+    (
+        bob->seller:ok.
+        bob->alice:ok.
+        bob->seller:address<string>.
+        seller->bob:date<string>.
+        bob>>carol.end
+        ,
+        bob->alice:quit.
+        bob->seller:quit.
+        bob>>carol.end
+    )
+    ,
+    bob->seller:ok.
+    bob->alice:ok.
+    bob->seller:address<string>.
+    seller->bob:date<string>.end
+)
