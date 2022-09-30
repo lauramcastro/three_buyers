@@ -13,6 +13,7 @@
 %% GenServer callbacks
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
 
+-spec start()->'#bob?quote<integer>.bob<<.@(seller!ok.alice!ok.seller!address<string>.seller?date<string>.>>bob.end,alice!quit.seller!quit.>>bob.end)'.
 start() ->
     start_link(?MODULE).
 
